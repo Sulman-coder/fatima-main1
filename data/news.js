@@ -1,4 +1,4 @@
-// src/data/news.ts
+
 export const news = [
   {
     title: "Research hub gets foreign partnership",
