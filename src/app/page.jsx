@@ -63,7 +63,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full h-screen">
         <video
-          src="/videos/seamless-hero.mp4"
+          src="/images/video1.mp4"
           autoPlay
           muted
           loop
@@ -73,7 +73,7 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-[-10]" />
         <div className="relative z-10 flex items-center justify-center h-full text-white text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Welcome to Helix Biogen Institute
+            {/* Welcome to Helix Biogen Institute */}
           </h1>
         </div>
       </section>
