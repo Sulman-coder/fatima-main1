@@ -9,7 +9,7 @@
 
 "use client";
 
-import Navbar from "@/components/about/Navbar";
+import Navbar from "../about/Navbar";
 
 export default function ClientNavbarWrapper() {
   return <Navbar />;
