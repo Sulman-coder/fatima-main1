@@ -85,7 +85,7 @@ export default function Navbar() {
           </AnimatePresence>
         </div> */}
 
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-full">
+        <div className="max-w-8xl mx-auto px-6 flex justify-between items-center h-full">
           {/* Left: Hamburger + Logo (both vertically centered) */}
           <div className="flex items-center space-x-6">
             {/* Hamburger menu for mobile */}
@@ -113,7 +113,7 @@ export default function Navbar() {
                     transition={{ duration: 0.2 }}
                     className="text-3xl text-white"
                   >
-                    <HiMenu />
+                    <HiMenu size={40} />
                   </motion.button>
                 )}
               </AnimatePresence>
