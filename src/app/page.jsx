@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* Hero Section */}
-      <section className="relative w-full h-screen">
+      <section className="relative w-full md:h-screen h-[60vh]">
         <video
           src="/images/video1.mp4"
           autoPlay
@@ -109,7 +109,7 @@ export default function Home() {
             <img
               src="/images/home1.png"
               alt="Research Image 1"
-              className="w-full h-auto object-contain rounded"
+              className="w-full h-auto object-cover rounded"
             />
             <img
               src="/images/home2.png"
@@ -132,7 +132,7 @@ export default function Home() {
             className="object-contain"
           />
         </div>
-        <div className="relative z-10 bg-[#112D4E] text-white max-w-4xl mx-auto p-10 sm:p-14 space-y-6 shadow-md">
+        <div className="relative z-10 bg-[#112D4E] text-white max-w-4xl mx-auto p-6 sm:p-10 space-y-6 shadow-md">
           <h2 className="text-[#F0A500] text-3xl sm:text-4xl font-medium">
             Driving Scientific Discovery
           </h2>
@@ -202,13 +202,13 @@ export default function Home() {
             {newsCards.map((card, idx) => (
               <div
                 key={idx}
-                className="bg-white border rounded-md shadow hover:shadow-lg transition overflow-hidden w-full max-w-[280px] mx-auto"
+                className="bg-white border rounded-md shadow hover:shadow-lg transition overflow-hidden w-full max-w-[370px] mx-auto"
               >
                 <Image
                   src={card.image}
                   alt={card.title}
                   width={400}
-                  height={250}
+                  height={300}
                   className="w-full h-60 object-cover"
                 />
                 <div className="p-4">

@@ -88,7 +88,6 @@ export default function Navbar() {
         <div className="max-w-8xl mx-auto px-6 flex justify-between items-center h-full">
           {/* Left: Hamburger + Logo (both vertically centered) */}
           <div className="flex items-center space-x-6">
-            {/* Hamburger menu for mobile */}
             <div className="">
               <AnimatePresence exitBeforeEnter initial={false}>
                 {sidebarOpen ? (
@@ -138,7 +137,7 @@ export default function Navbar() {
                   alt="Helix Biogen Institute Logo"
                   className="w-12 h-12 object-contain"
                 />
-                <span className="text-xl font-bold hidden sm:block">
+                <span className="md:text-xl text-[16px] font-bold block">
                   Helix Biogen Institute
                 </span>
               </Link>
