@@ -20,7 +20,7 @@ const menu = [
     children: [
       "Certificate Courses",
       "Online Courses",
-      "Training",
+      "Industrial Training",
       "Internship",
     ],
   },
