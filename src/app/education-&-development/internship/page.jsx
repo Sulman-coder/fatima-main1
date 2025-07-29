@@ -4,12 +4,12 @@ import Link from "next/link";
 
 export default function Internship() {
   return (
-    <main className="max-w-5xl mx-auto px-4 py-12 text-gray-800">
+    <main className="py-20 text-gray-800">
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">
        Internship
       </h1>
 
-      <div className="relative w-full h-96 mb-8">
+      <div className="relative w-full md:h-[70vh] h-[30vh] mb-8">
   <Image
     src="/images/education.jpg"
     alt="Education Banner"

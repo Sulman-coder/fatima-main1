@@ -135,11 +135,11 @@ export default function Navbar() {
                 <img
                   src="/images/Logo.png"
                   alt="Helix Biogen Institute Logo"
-                  className="w-12 h-12 object-contain"
+                  className="md:w-44 w-40 object-contain"
                 />
-                <span className="md:text-xl text-[16px] font-bold block">
+                {/* <span className="md:text-xl text-[16px] font-bold block">
                   Helix Biogen Institute
-                </span>
+                </span> */}
               </Link>
             </motion.div>
           </div>
