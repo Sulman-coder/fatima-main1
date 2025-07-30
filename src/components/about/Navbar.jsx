@@ -135,7 +135,7 @@ export default function Navbar() {
                 <img
                   src="/images/Logo.png"
                   alt="Helix Biogen Institute Logo"
-                  className="md:w-44 w-40 object-contain"
+                  className="md:w-50 w-40 object-contain"
                 />
                 {/* <span className="md:text-xl text-[16px] font-bold block">
                   Helix Biogen Institute

@@ -44,7 +44,7 @@ export default function Home() {
             className="object-contain object-right"
           />
         </div>
-        <div className="relative z-10 max-w-4xl space-y-6">
+        <div className="relative z-10 max-w-4xl lg:px-24 md:px-16 px-4 space-y-6">
           <h2 className="text-[#F0A500] text-4xl md:text-5xl font-semibold leading-tight">
             Advancing Science for Global Impact
           </h2>
@@ -158,9 +158,9 @@ export default function Home() {
       </section>
 
       {/* Amplifying Investment Section */}
-      <section className="bg-teal-900 text-white py-20 px-4">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-          <div className="w-full md:w-1/2">
+      <section className="bg-teal-900 text-white py-20 lg:px-48 md:px-32 px-4 ">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10 ">
+          <div className="w-full md:w-1/2 ">
             <h2 className="text-3xl md:text-4xl text-orange-400 font-semibold mb-6">
               Amplifying Investment in Science
             </h2>
@@ -193,7 +193,7 @@ export default function Home() {
       </section>
 
       {/* News Cards Section */}
-      <section className="bg-[#FFF5F7] py-16 px-4">
+      <section className="bg-[#FFF5F7] py-16 md:px-32 px-4">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-8">
             Latest News & Blogs
@@ -202,7 +202,7 @@ export default function Home() {
             {newsCards.map((card, idx) => (
               <div
                 key={idx}
-                className="bg-white border rounded-md shadow hover:shadow-lg transition overflow-hidden w-full max-w-[370px] mx-auto"
+                className="bg-white border rounded-md shadow hover:shadow-lg transition overflow-hidden w-full max-w-[450px] mx-auto"
               >
                 <Image
                   src={card.image}
@@ -230,7 +230,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="flex justify-start mt-8">
+          <div className="flex justify-center mt-8">
             <Link
               href="/publication/news-prints"
               className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition"
