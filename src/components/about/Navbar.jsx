@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
+import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
+
 
 const menu = [
   { label: "About", children: ["Overview", "Leadership", "History"] },
@@ -35,6 +37,8 @@ export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeFolder, setActiveFolder] = useState(null);
   const [navbarHeight, setNavbarHeight] = useState(80);
+  const [searchMenu, openSearchMenu] = useState(false)
+  console.log(searchMenu)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -145,11 +149,40 @@ export default function Navbar() {
           </div>
 
           {/* Right: Navigation links (desktop only) */}
-          <div className="hidden md:flex gap-6 font-semibold">
-            <Link href="/">Home</Link>
-            <Link href="/about/overview">About</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
+
+<div className="hidden md:flex gap-6 font-semibold items-center relative">
+  {/* Search Input with Icon */}
+  <div
+    className={`relative transition-all duration-300 overflow-hidden ${
+      searchMenu ? "w-64 opacity-100 mr-2" : "w-0 opacity-0"
+    }`}
+  >
+    <MagnifyingGlassIcon className="w-5 h-5 text-black absolute left-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
+    <input
+      type="text"
+      placeholder="Search..."
+      autoFocus
+      className="w-full pl-10 pr-3 py-1 bg-white border outline-none"
+    />
+  </div>
+
+  {/* Search Button */}
+  <button
+    className={`cursor-pointer relative px-3 py-1 transition-colors duration-300 ${
+      searchMenu ? "bg-blue-600 text-white" : "hover:text-gray-600"
+    }`}
+    onClick={() => openSearchMenu(!searchMenu)}
+  >
+    Search
+  </button>
+
+  <Link className="hover:text-gray-600" href="/support-us/give-now">Give Now</Link>
+  <Link className="hover:text-gray-600" href="/contact">Contact</Link>
+</div>
+
+         
+
+
         </div>
       </nav>
 
