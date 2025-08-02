@@ -5,17 +5,18 @@ import Link from "next/link";
 export default function OnlineCourses() {
   return (
     <main className=" mx-auto py-20 text-gray-800">
-      <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-       Online Course
-      </h1>
+      
 
-      <div className="relative w-full md:h-[70vh] h-[30vh] mb-8">
+      <div className="relative w-full md:h-[70vh] h-[30vh] flex items-center justify-center">
   <Image
     src="/images/education.jpg"
     alt="Education Banner"
     fill
     className="object-cover opacity-60"
   />
+  <h1 className="absolute text-4xl md:text-4xl font-bold mb-6 text-center text-white">
+       Online Course
+      </h1>
 </div>
 
 <div className="w-full h-[10px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />

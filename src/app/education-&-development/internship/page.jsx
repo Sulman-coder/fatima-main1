@@ -4,18 +4,19 @@ import Link from "next/link";
 
 export default function Internship() {
   return (
-    <main className="py-20 text-gray-800">
-      <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-       Internship
-      </h1>
+    <main className="text-white">
+      
 
-      <div className="relative w-full md:h-[70vh] h-[30vh] mb-8">
+      <div className="relative flex items-center justify-center w-full md:h-[70vh] h-[30vh]">
   <Image
     src="/images/education.jpg"
     alt="Education Banner"
     fill
     className="object-cover opacity-60"
   />
+  <h1 className="absolute z-20 text-white text-3xl md:text-4xl font-bold mb-6 text-center">
+       Internship
+      </h1>
 </div>
 
 <div className="w-full h-[10px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
@@ -42,15 +43,15 @@ export default function Internship() {
 <div className="px-4 py-16 max-w-6xl mx-auto space-y-12">
       {/* Page Title */}
       <div className="text-center">
-        <h1 className="text-4xl font-extrabold text-gray-800">Internship Program</h1>
-        <p className="mt-4 text-lg text-gray-600">
+        <h1 className="text-4xl font-extrabold text-white">Internship Program</h1>
+        <p className="mt-4 text-lg text-white">
           Preparing future scientists with hands-on laboratory exposure and professional mentorship.
         </p>
       </div>
 
       {/* Text on Left, Image on Right */}
       <div className="flex flex-col-reverse md:flex-row gap-8 items-center">
-        <div className="w-full md:w-1/2 space-y-5 text-gray-700 text-lg">
+        <div className="w-full md:w-1/2 space-y-5 text-white text-lg">
           <p>
             Our Internship Program offers undergraduate and postgraduate students a unique opportunity to work alongside
             experienced scientists in an advanced biotech environment.
@@ -73,7 +74,7 @@ export default function Internship() {
       </div>
 
       {/* Second Block */}
-      <div className="text-gray-700 text-lg space-y-5">
+      <div className="text-white text-lg space-y-5">
         <p>
           Key learning areas include:
         </p>

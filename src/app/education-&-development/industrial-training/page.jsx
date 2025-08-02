@@ -4,18 +4,19 @@ import Link from "next/link";
 
 export default function IndustrialTraining() {
   return (
-    <main className="py-20 text-gray-800">
-      <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-       Industrial Training
-      </h1>
+    <main className=" text-white">
+      
 
-      <div className="relative w-full md:h-[70vh] h-[30vh] mb-8">
+      <div className="relative w-full md:h-[70vh] h-[30vh] flex items-center justify-center">
   <Image
     src="/images/education.jpg"
     alt="Education Banner"
     fill
     className="object-cover opacity-60"
   />
+  <h1 className="absolute z-20 text-white text-3xl md:text-4xl font-bold mb-6 text-center">
+       Industrial Training
+      </h1>
 </div>
 
 <div className="w-full h-[10px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
@@ -43,8 +44,8 @@ return (
     <div className="px-4 py-16 max-w-6xl mx-auto space-y-12">
       {/* Page Title */}
       <div className="text-center">
-        <h1 className="text-4xl font-extrabold text-gray-800">Industrial Training Program</h1>
-        <p className="mt-4 text-lg text-gray-600">
+        <h1 className="text-4xl font-extrabold text-white">Industrial Training Program</h1>
+        <p className="mt-4 text-lg text-white">
           Bridging the gap between academia and the real world through hands-on biotech experience.
         </p>
       </div>
@@ -60,7 +61,7 @@ return (
             className="rounded-xl shadow-md"
           />
         </div>
-        <div className="w-full md:w-1/2 space-y-5 text-gray-700 text-lg">
+        <div className="w-full md:w-1/2 space-y-5 text-white text-lg">
           <p>
             Helix Biogen Institute offers a cutting-edge Industrial Training Program aimed at students and graduates of
             biotechnology, biochemistry, microbiology, and related life sciences disciplines.
@@ -73,7 +74,7 @@ return (
       </div>
 
       {/* Second Text Block */}
-      <div className="text-gray-700 text-lg space-y-5">
+      <div className="text-white text-lg space-y-5">
         <p>
           The training is supervised by seasoned researchers and includes modules such as:
         </p>
