@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Internship() {
   return (
-    <main className="text-white">
+    <main className="text-white bg-white">
       
 
       <div className="relative flex items-center justify-center w-full md:h-[70vh] h-[30vh]">
@@ -40,18 +40,18 @@ export default function Internship() {
   </Link>
 </div>
 
-<div className="px-4 py-16 max-w-6xl mx-auto space-y-12">
+<div className="px-4 py-16 max-w-6xl mx-auto space-y-12 bg-white">
       {/* Page Title */}
       <div className="text-center">
-        <h1 className="text-4xl font-extrabold text-white">Internship Program</h1>
-        <p className="mt-4 text-lg text-white">
+        <h1 className="text-4xl font-extrabold text-black">Internship Program</h1>
+        <p className="mt-4 text-lg text-black">
           Preparing future scientists with hands-on laboratory exposure and professional mentorship.
         </p>
       </div>
 
       {/* Text on Left, Image on Right */}
       <div className="flex flex-col-reverse md:flex-row gap-8 items-center">
-        <div className="w-full md:w-1/2 space-y-5 text-white text-lg">
+        <div className="w-full md:w-1/2 space-y-5 text-black text-lg">
           <p>
             Our Internship Program offers undergraduate and postgraduate students a unique opportunity to work alongside
             experienced scientists in an advanced biotech environment.
@@ -74,7 +74,7 @@ export default function Internship() {
       </div>
 
       {/* Second Block */}
-      <div className="text-white text-lg space-y-5">
+      <div className="text-black text-lg space-y-5">
         <p>
           Key learning areas include:
         </p>

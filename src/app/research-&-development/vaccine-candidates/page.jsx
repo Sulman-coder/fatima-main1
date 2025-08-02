@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function VaccineCandidates() {
   return (
-    <main className="text-white bg-black min-h-screen">
+    <main className="text-black bg-white min-h-screen">
       {/* Hero Section with Video */}
       <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
        <Image

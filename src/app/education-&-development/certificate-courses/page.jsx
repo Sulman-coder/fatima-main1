@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function ProfessionalCertificatesPage() {
   return (
-    <main className="w-full mx-auto text-white">
+    <main className="w-full mx-auto text-black">
       {/* Hero Section with Video */}
       <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
         <img
@@ -44,7 +44,19 @@ export default function ProfessionalCertificatesPage() {
         </Link>
       </div>
 
-      <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+     <div className="bg-white">
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          <h2 className="text-2xl font-semibold mb-4">Professional Certificates</h2>
+          <p className="text-gray-700 mb-6">
+            Explore our range of professional certificate courses designed to enhance your skills and career prospects.
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Certificate in Data Science</li>
+            <li>Certificate in Digital Marketing</li>
+            <li>Certificate in Project Management</li>
+            <li>Certificate in Graphic Design</li>
+          </ul>
+        </div> <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">
         Professional Certificate Courses
       </h1>
 
@@ -109,6 +121,7 @@ export default function ProfessionalCertificatesPage() {
         </p>
       </section>
       </div>
+     </div>
       <div className="w-full h-[10px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
     </main>
   );
