@@ -44,7 +44,7 @@ export default function Home() {
             className="object-contain object-right"
           />
         </div>
-        <div className="relative z-10 max-w-4xl lg:px-24 md:px-16 px-4 space-y-6">
+        <div className="relative z-10 max-w-4xl lg:px-24 md:px-16 px-3 space-y-6">
           <h2 className="text-[#F0A500] text-4xl md:text-5xl font-semibold leading-tight">
             Advancing Science for Global Impact
           </h2>
@@ -72,7 +72,7 @@ export default function Home() {
       </section>
 
       {/* Section 2: Text + Images */}
-      <section className="px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20">
+      <section className="px-6 lg:px-24 md:px-16 py-12 bg-white">
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
           <h2 className="text-[#F0A500] text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4 sm:mb-6">
@@ -80,7 +80,7 @@ export default function Home() {
           </h2>
 
           {/* Paragraph */}
-          <p className="text-base sm:text-lg lg:text-xl text-gray-700 mb-6 sm:mb-8">
+          <p className="text-base sm:text-lg lg:text-xl text-black mb-6 sm:mb-8">
             A research institute is an organization dedicated to conducting
             scientific investigations, advancing knowledge, and developing
             innovative solutions across various fields...
@@ -121,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* Section 2: Blue Box Section */}
-      <section className="relative bg-black py-20 px-4 sm:px-8 overflow-hidden">
+      <section className="relative bg-white py-20 px-4 sm:px-8 overflow-hidden">
         {/* <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-10 mix-blend-overlay hidden md:block"> */}
         <div className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 translate-x-8 opacity-10 z-0 hidden md:block">
           <Image
