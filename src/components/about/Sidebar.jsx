@@ -37,7 +37,7 @@ export default function Sidebar({ open, setOpen, menu }) {
             onClick={() => setOpen(false)}
           />
 
-          {/* Main Sidebar Panel */}
+          {/* Sidebar Wrapper */}
           <motion.aside
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
@@ -45,16 +45,17 @@ export default function Sidebar({ open, setOpen, menu }) {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className="fixed top-0 left-0 w-full md:w-[30%] h-full z-40 bg-[#BCBEC0] overflow-hidden"
           >
-            <div className="w-full h-full flex relative">
+            <div className={`w-full h-full flex relative ${isMobile ? "overflow-hidden" : ""}`}>
               {/* Folder Panel */}
               <motion.div
                 animate={{ x: activeFolder && isMobile ? "-100%" : 0 }}
+                initial={false}
                 transition={{ duration: 0.3 }}
-                className={`h-full z-10 transition-all duration-300 
+                className={`h-full z-20 transition-all duration-300 
                   ${isMobile ? "w-full absolute" : "w-full"} 
                   bg-[#BCBEC0] text-black p-6 overflow-y-auto`}
               >
-                {/* Top Section */}
+                {/* Top Section (Mobile Only) */}
                 <div className="space-y-4 mb-4 border-b pb-4 md:hidden">
                   <div className="flex items-center mt-20 justify-between px-2 gap-3">
                     <button
@@ -67,16 +68,10 @@ export default function Sidebar({ open, setOpen, menu }) {
                     >
                       Search
                     </button>
-                    <Link
-                      className="hover:text-gray-600 font-semibold text-sm"
-                      href="/support-us/give-now"
-                    >
+                    <Link className="hover:text-gray-600 font-semibold text-sm" href="/support-us/give-now">
                       Give Now
                     </Link>
-                    <Link
-                      className="hover:text-gray-600 font-semibold text-sm"
-                      href="/contact"
-                    >
+                    <Link className="hover:text-gray-600 font-semibold text-sm" href="/contact">
                       Contact
                     </Link>
                   </div>
@@ -102,7 +97,7 @@ export default function Sidebar({ open, setOpen, menu }) {
                   )}
                 </div>
 
-                {/* Menu Items */}
+                {/* Main Menu Items */}
                 <div className="space-y-4 md:pt-32">
                   {menu.map((item, index) => (
                     <div
@@ -123,53 +118,53 @@ export default function Sidebar({ open, setOpen, menu }) {
                   ))}
                 </div>
               </motion.div>
+
+              {/* Children Panel (Mounted side-by-side on mobile) */}
+              <AnimatePresence>
+                {activeFolder && (
+                  <motion.div
+                    key="child-panel"
+                    initial={{ x: isMobile ? "-100%" : 0 }}
+                    animate={{ x: isMobile ? "0%" : 0 }}
+                    exit={{ x: isMobile ? "100%" : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className={`${
+                      isMobile
+                        ? "absolute top-0 left-0 w-full h-full z-30"
+                        : "fixed top-0 left-[30%] w-[30%] h-full z-50"
+                    } bg-[#D1D3D4] text-black text-sm p-6 overflow-y-auto`}
+                  >
+                    <div className="mt-12">
+                      <button
+                        className="text-sm cursor-pointer text-blue-600 mb-4"
+                        onClick={() => setActiveFolder(null)}
+                      >
+                        ← Back
+                      </button>
+                      <div className="space-y-4 mt-4">
+                        {menu
+                          .find((item) => item.label === activeFolder)
+                          ?.children.map((child, idx) => (
+                            <Link
+                              key={idx}
+                              href={`/${activeFolder
+                                .toLowerCase()
+                                .replace(/ /g, "-")}/${child
+                                .toLowerCase()
+                                .replace(/ /g, "-")}`}
+                              onClick={() => setOpen(false)}
+                              className="block px-3 py-2 rounded hover:bg-gray-200 cursor-pointer text-sm text-gray-700 font-semibold"
+                            >
+                              {child}
+                            </Link>
+                          ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </motion.aside>
-
-          {/* Children Panel */}
-          <AnimatePresence>
-            {activeFolder && (
-              <motion.div
-                key="child-panel"
-                initial={{ x: -100 }}
-                animate={{ x: 0 }}
-                exit={{ x: -100 }}
-                transition={{ duration: 0.3 }}
-                className={`${
-                  isMobile
-                    ? "fixed top-0 left-0 w-full h-full z-0"
-                    : "fixed top-0 left-[30%] w-[30%] h-full z-50"
-                } bg-[#D1D3D4] text-black text-sm p-6 overflow-y-auto`}
-              >
-                <div className="mt-12">
-                  <button
-                    className="text-sm cursor-pointer text-blue-600 mb-4"
-                    onClick={() => setActiveFolder(null)}
-                  >
-                    ← Back
-                  </button>
-                  <div className="space-y-4 mt-4">
-                    {menu
-                      .find((item) => item.label === activeFolder)
-                      ?.children.map((child, idx) => (
-                        <Link
-                          key={idx}
-                          href={`/${activeFolder
-                            .toLowerCase()
-                            .replace(/ /g, "-")}/${child
-                            .toLowerCase()
-                            .replace(/ /g, "-")}`}
-                          onClick={() => setOpen(false)}
-                          className="block px-3 py-2 rounded hover:bg-gray-200 cursor-pointer text-sm text-gray-700 font-semibold"
-                        >
-                          {child}
-                        </Link>
-                      ))}
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
         </>
       )}
     </AnimatePresence>
