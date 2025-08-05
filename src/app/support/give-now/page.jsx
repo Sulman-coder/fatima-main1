@@ -14,16 +14,15 @@ export default function GiveNowPage() {
 
   return (
     <main className="bg-black text-white min-h-screen">
-      {/* Hero Video Section */}
-      <section className="relative w-full h-[70vh] overflow-hidden flex items-center justify-center">
-        <video
-          src="/images/video1.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
-        />
+       <section className="relative w-full md:h-screen h-[60vh]">
+  <video
+    src="https://res.cloudinary.com/dqbtjrq1o/video/upload/v1754421913/video1_yum3sb.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute top-0 left-0 w-full h-full object-cover -z-20"
+  />
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/80 via-black/30 to-black/90 z-0" />
         <h1 className="relative z-10 text-4xl md:text-6xl font-bold">Give Now</h1>
       </section>

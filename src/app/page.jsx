@@ -15,14 +15,14 @@ export default function Home() {
     <main className="relative min-h-screen overflow-hidden">
       {/* Hero Section */}
       <section className="relative w-full md:h-screen h-[60vh]">
-        <video
-          src="/images/video1.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover -z-20"
-        />
+  <video
+    src="https://res.cloudinary.com/dqbtjrq1o/video/upload/v1754421913/video1_yum3sb.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute top-0 left-0 w-full h-full object-cover -z-20"
+  />
         <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-[-10]" />
         <div className="relative z-10 flex items-center justify-center h-full text-white text-center px-4">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">

@@ -7,15 +7,16 @@ export default function DivisionPage() {
   return (
     <main className="text-white bg-black min-h-screen">
       {/* Hero Section with Video */}
-      <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
-        <video
-          src="/images/video1.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
-        />
+<section className="relative w-full md:h-screen h-[60vh]">
+  <video
+    src="https://res.cloudinary.com/dqbtjrq1o/video/upload/v1754421913/video1_yum3sb.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute top-0 left-0 w-full h-full object-cover -z-20"
+  />
+
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/20 z-0" />
         <h1 className="relative z-10 text-3xl md:text-5xl font-bold">
             Division
