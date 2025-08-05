@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { newsCards } from "../../data/newsCards";
+import { newsCards } from "../data/newsCards";
 
 
 export default function Home() {

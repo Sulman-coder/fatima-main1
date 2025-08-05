@@ -24,13 +24,14 @@ const menu = [
       "Online Courses",
       "Industrial Training",
       "Internship",
+      "Physical Courses"
     ],
   },
   {
     label: "Research & Development",
     children: ["Drugs & Peptides", "Vaccine Candidates", "Diagnostic Kits"],
   },
-  { label: "Miscellaneous", children: ["Bioinformatics Tool", "Portal"] },
+  { label: "Miscellaneous", children: ["Home", "Bioinformatics Tool", "Portal"] },
 ];
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -168,16 +169,16 @@ export default function Navbar() {
 
   {/* Search Button */}
   <button
-    className={`cursor-pointer relative px-3 py-1 transition-colors duration-300 ${
-      searchMenu ? "bg-blue-600 text-white" : "hover:text-gray-600"
+    className={`text-white cursor-pointer relative px-3 py-1 transition-colors duration-300 ${
+      searchMenu ? "bg-blue-600 text-white" : "hover:text-gray-300"
     }`}
     onClick={() => openSearchMenu(!searchMenu)}
   >
     Search
   </button>
 
-  <Link className="hover:text-gray-600" href="/support-us/give-now">Give Now</Link>
-  <Link className="hover:text-gray-600" href="/contact">Contact</Link>
+  <Link className="text-white hover:text-gray-300" href="/support/give-now">Give-Now</Link>
+  <Link className="text-white hover:text-gray-300" href="/support/contact">Contact</Link>
 </div>
 
          
