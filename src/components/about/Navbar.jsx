@@ -59,36 +59,7 @@ export default function Navbar() {
     scrolled ? "bg-black/70 backdrop-blur-md py-5" : "bg-transparent py-3"
   }`}
 >
-        {/* Animated button */}
-        {/* <div className="absolute left-6 top-1/2 -translate-y-1/2 z-60">
-          <AnimatePresence exitBeforeEnter initial={false}>
-            {sidebarOpen ? (
-              <motion.button
-                key="close"
-                onClick={() => setSidebarOpen(false)}
-                initial={{ opacity: 0, rotate: -90 }}
-                animate={{ opacity: 1, rotate: 0 }}
-                exit={{ opacity: 0, rotate: 90 }}
-                transition={{ duration: 0.2 }}
-                className="text-3xl text-white"
-              >
-                <IoClose />
-              </motion.button>
-            ) : (
-              <motion.button
-                key="menu"
-                onClick={() => setSidebarOpen(true)}
-                initial={{ opacity: 0, rotate: 90 }}
-                animate={{ opacity: 1, rotate: 0 }}
-                exit={{ opacity: 0, rotate: -90 }}
-                transition={{ duration: 0.2 }}
-                className="text-3xl text-white"
-              >
-                <HiMenu />
-              </motion.button>
-            )}
-          </AnimatePresence>
-        </div> */}
+     
 
         <div className="max-w-8xl mx-auto px-6 flex justify-between items-center h-full">
           {/* Left: Hamburger + Logo (both vertically centered) */}

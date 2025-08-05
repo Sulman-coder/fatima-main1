@@ -1,8 +1,10 @@
 import { FiExternalLink } from "react-icons/fi";
-import { publications } from "../../../../data/publications";
+// import { publications } from "../../../../data/publications";
 
 
 
+
+import { publications } from "@/data/publications";
 
 export default function ResearchPage() {
   return (

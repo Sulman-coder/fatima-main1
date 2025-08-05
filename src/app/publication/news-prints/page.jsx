@@ -1,6 +1,8 @@
 import { FiCalendar, FiExternalLink } from "react-icons/fi";
 //  import { news } from "../../../../data/news";
- import { news } from "../../data/news";
+//  import { news } from "../../data/news";
+import { news } from "@/data/news";
+
 
 
 export default function NewsCard() {
