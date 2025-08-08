@@ -19,52 +19,30 @@ export default function IndustrialTraining() {
 
       <div className="w-full h-[10px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
 
-      <div className="bg-white">  
-        <div className="flex justify-center space-x-4 py-3 bg-black text-xs font-semibold">
-        <Link
-          href="/education/professional-certificates"
-          className="hover:underline text-white"
-        >
-          Professional Certificate Courses
-        </Link>
-        <Link
-          href="/education & development/online-courses"
-          className="hover:underline text-gray-500"
-        >
-          Online Courses
-        </Link>
-        <Link
-          href="/education & development/physical-courses"
-          className="hover:underline text-gray-500"
-        >
-          Physical Courses
-        </Link>
-        <Link
-          href="/education & development/industrial-training"
-          className="hover:underline text-gray-500"
-        >
-          Industrial Training
-        </Link>
-        <Link
-          href="/education & development/internship"
-          className="hover:underline text-gray-500"
-        >
-          Internship
-        </Link>
-      </div>
+     
+<div className="flex justify-center space-x-4 py-3 bg-black text-xs font-semibold">
+  <Link href="/education-&-development/professional-certificates" className="hover:underline text-white">
+    Professional Certificate Courses
+  </Link>
+  <Link href="/education-&-development/online-courses" className="hover:underline text-gray-500">
+    Online Courses
+  </Link>
+  <Link href="/education-&-development/physical-courses" className="hover:underline text-gray-500">
+    Physical Courses
+  </Link>
+  <Link href="/education-&-development/industrial-training" className="hover:underline text-gray-500">
+    Industrial Training
+  </Link>
+  <Link href="/education-&-development/internship" className="hover:underline text-gray-500">
+    Internship
+  </Link>
+</div>
 
-      <div className="px-4 py-16 max-w-6xl mx-auto space-y-12">
-        {/* Page Title */}
-        <div className="text-center">
-          <h1 className="text-4xl font-extrabold text-black">
-            Industrial Training Program
-          </h1>
-          <p className="mt-4 text-lg text-black">
-            Bridging the gap between academia and the real world through
-            hands-on biotech experience.
-          </p>
-        </div>
 
+ <div className="bg-white">
+        <div className="max-w-4xl mx-auto px-4 py-8">
+
+{/* <div className="px-4 py-16 max-w-6xl mx-auto space-y-12 bg-white"> */}
         {/* Image on Left, Text on Right */}
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="relative w-full md:w-1/2 h-64 md:h-96">
@@ -109,9 +87,9 @@ export default function IndustrialTraining() {
             research, pharmaceuticals, diagnostics, and healthcare industries.
           </p>
         </div>
-      </div>
-
-      </div>
+        </div>
+      
+       </div>
 
       <div className="w-full h-[10px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
     </main>

@@ -8,11 +8,12 @@ export default function ProfessionalCertificatesPage() {
     <main className="w-full mx-auto text-black">
       {/* Hero Section with Video */}
       <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
-        <img
-          src="/images/educaion.jpg" // یہاں اپنی image کا درست path دیں
-          alt="Banner Image"
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
-        />
+     <Image
+       src="/images/education.jpg"
+       alt="Education Banner"
+       fill
+       className="object-cover opacity-60"
+     />
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/20 z-0" />
         <h1 className="relative z-10 text-white text-3xl md:text-5xl font-bold">
           Certificate courses
@@ -22,27 +23,23 @@ export default function ProfessionalCertificatesPage() {
       {/* Gradient Line */}
       <div className="w-full h-[10px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
 
-      {/* Bottom Navigation Links */}
-      <div className="flex justify-center space-x-4 py-3 bg-black text-xs mb-10">
-        <Link
-          href="/science & medicine/overview"
-          className="hover:underline text-gray-400"
-        >
-          Ovwerview
-        </Link>
-        <Link
-          href="/science & medicine/division"
-          className="hover:underline text-gray-500"
-        >
-          Division
-        </Link>
-        <Link
-          href="/science & medicine/servicesS"
-          className="hover:underline text-gray-500"
-        >
-          Services
-        </Link>
-      </div>
+ <div className="flex justify-center space-x-4 py-3 bg-black text-xs font-semibold">
+  <Link href="/education-&-development/professional-certificates" className="hover:underline text-white">
+    Professional Certificate Courses
+  </Link>
+  <Link href="/education-&-development/online-courses" className="hover:underline text-gray-500">
+    Online Courses
+  </Link>
+  <Link href="/education-&-development/physical-courses" className="hover:underline text-gray-500">
+    Physical Courses
+  </Link>
+  <Link href="/education-&-development/industrial-training" className="hover:underline text-gray-500">
+    Industrial Training
+  </Link>
+  <Link href="/education-&-development/internship" className="hover:underline text-gray-500">
+    Internship
+  </Link>
+</div>
 
      <div className="bg-white">
         <div className="max-w-4xl mx-auto px-4 py-8">

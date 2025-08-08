@@ -6,15 +6,15 @@ import Link from "next/link";
 export default function AboutPage() {
   return (
     <main className="text-white bg-black min-h-screen">
-        <section className="relative w-full md:h-screen h-[60vh]">
-  <video
-    src="https://res.cloudinary.com/dqbtjrq1o/video/upload/v1754421913/video1_yum3sb.mp4"
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="absolute top-0 left-0 w-full h-full object-cover -z-20"
-  />
+{/* <section className="relative w-full h-[40vh]"> */}
+           <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
+           
+     <Image
+                src="/images/about.jpeg"
+                alt="About Banner"
+                fill
+                className="object-cover opacity-60"
+              />
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/20 z-0" />
         <h1 className="relative z-10 text-3xl md:text-5xl font-bold">
           SUPPORT
@@ -29,15 +29,15 @@ export default function AboutPage() {
         <Link href="/support/overview" className="hover:underline text-gray-400">
           Support
         </Link>
-        <Link
+        {/* <Link
           href="/support/overviews"
           className="hover:underline text-gray-500"
         >
-          {/* Overviews
-        </Link>
+           Overviews
+        </Link> */}
         <Link href="/support/contact" className="hover:underline text-gray-500">
-          Contact */}
-          Contact
+          Contact 
+    
         </Link>
       </div>
 
@@ -89,7 +89,11 @@ export default function AboutPage() {
         edge research, speeds up life saving discoveries, and brings us closer to 
         solutions for the world’s most pressing health challenges. Together, we are 
         not just funding research, we are shaping the future of medicine.  
-          <h3 className="text-lg font-semibold mb-2">[Give now]</h3>
+          {/* <h3 className="text-lg font-semibold mb-2">[Give now]</h3> */}
+          {/* <Link href="/donate" passHref> */}
+<Link href="/support/give-now" className="text-lg font-semibold mb-2 text-blue-600 hover:underline">
+  [Give now]
+</Link>
 
           </p>
         </div>

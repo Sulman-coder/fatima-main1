@@ -37,7 +37,7 @@ export default function Home() {
         {/* <div className="absolute right-0 top-0 h-full w-1/2 opacity-10 hidden md:block"> */}
         <div className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 translate-x-8 opacity-10 z-0 hidden md:block">
           <Image
-            src="/images/Logo.png"
+            src="/images/Logo2.png"
             alt="Helix Biogen Institute Logo"
             width={500}
             height={500}

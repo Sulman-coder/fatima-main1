@@ -1,9 +1,26 @@
 'use client';
 import React from 'react';
+import Image from 'next/image'; 
+
 
 const PortalPage = () => {
   return (
-    <main className="p-8 max-w-5xl mx-auto">
+    // <main className="p-8 max-w-5xl mx-auto">
+    <main className="relative bg-gray-100 min-h-screen overflow-hidden">
+  
+
+
+ <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
+        <Image
+          src="/images/supp.jpeg"
+          alt="About Banner"
+          fill
+          className="object-cover opacity-60"
+        />
+        <h1 className="absolute text-4xl font-bold text-white">Bioinformatics Tool</h1>
+      </section>
+      <div className="w-full h-[3px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
+
       <h1 className="text-4xl font-bold mb-6 text-center">Portal</h1>
       <p className="text-lg mb-8 text-gray-700 text-center">
         Access dedicated sections for students, researchers, and staff. Log in to explore tools, resources, and personalized dashboards.

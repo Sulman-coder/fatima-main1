@@ -7,18 +7,18 @@ export default function Contact() {
   return (
     <main className="text-white bg-black min-h-screen">
       {/* Hero Section with Video */}
- <section className="relative w-full md:h-screen h-[60vh]">
-  <video
-    src="https://res.cloudinary.com/dqbtjrq1o/video/upload/v1754421913/video1_yum3sb.mp4"
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="absolute top-0 left-0 w-full h-full object-cover -z-20"
-  />
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/20 z-0" />
-        <h1 className="relative z-10 text-3xl md:text-5xl font-bold">
-          CONTACT
+ {/* <section className="relative w-full h-[40vh]"> */}
+           <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
+
+     <Image
+                src="/images/supp.jpeg"
+                alt="About Banner"
+                fill
+                className="object-cover opacity-60"
+              />
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/20 z-0" />
+        <h1 className="relative z-10 text-3xl md:text-5xl font-bold text-white">
+          Contact
         </h1>
       </section>
 

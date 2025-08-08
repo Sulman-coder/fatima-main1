@@ -3,6 +3,8 @@
 import Image from "next/image";
 import React from "react";
 import { FiExternalLink } from "react-icons/fi";
+import Link from "next/link";
+
 
 const blogPosts = [
   {
@@ -64,18 +66,39 @@ const blogPosts = [
 
 const BlogsPage = () => {
   return (
-    <div className="min-h-screen text-white bg-white">
+    // <div className="min-h-screen text-white bg-white">
+     <main className="bg-gray-100 min-h-screen">
       <section className="relative w-full h-[60vh] overflow-hidden flex items-end justify-center">
         <Image
-          fill
-          src="/images/about.jpeg"
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
-        />
+                src="/images/research.jpg"
+                alt="Research Banner"
+                fill
+                className="object-cover opacity-60"
+              />
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/20 z-0" />
         <h1 className="relative z-10 text-3xl md:text-5xl font-bold ml-32 pb-4">
           Blogs
         </h1>
       </section>
+       <div className="w-full h-[5px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-lg" />
+
+ <div className="flex justify-center space-x-4 py-3 bg-black text-xs">
+        <Link href="/publication/research" className="hover:underline text-gray-400">
+          Research
+        </Link>
+        <Link
+          href="/publication/blogs"
+          className="hover:underline text-gray-500"
+        >
+          Blogs
+        </Link>
+        <Link href="/publication/news-prints" className="hover:underline text-gray-500">
+      News & Prints
+        </Link>
+      </div>
+
+
+
 
       {/* Blogs */}
       <section className="px-6 md:px-32 py-20">
@@ -104,7 +127,9 @@ const BlogsPage = () => {
           ))}
         </div>
       </section>
-    </div>
+     <div className="w-full h-[5px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-lg" />
+
+    </main>
   );
 };
 

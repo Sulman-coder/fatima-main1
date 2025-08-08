@@ -23,22 +23,23 @@ export default function Internship() {
 
 
 <div className="flex justify-center space-x-4 py-3 bg-black text-xs font-semibold">
-  <Link href="/education/professional-certificates" className="hover:underline text-white">
+  <Link href="/education-&-development/professional-certificates" className="hover:underline text-white">
     Professional Certificate Courses
   </Link>
-  <Link href="/education & development/online-courses" className="hover:underline text-gray-500">
+  <Link href="/education-&-development/online-courses" className="hover:underline text-gray-500">
     Online Courses
   </Link>
-  <Link href="/education & development/physical-courses" className="hover:underline text-gray-500">
+  <Link href="/education-&-development/physical-courses" className="hover:underline text-gray-500">
     Physical Courses
   </Link>
-  <Link href="/education & development/industrial-training" className="hover:underline text-gray-500">
+  <Link href="/education-&-development/industrial-training" className="hover:underline text-gray-500">
     Industrial Training
   </Link>
-  <Link href="/education & development/internship" className="hover:underline text-gray-500">
+  <Link href="/education-&-development/internship" className="hover:underline text-gray-500">
     Internship
   </Link>
 </div>
+
 
 <div className="px-4 py-16 max-w-6xl mx-auto space-y-12 bg-white">
       {/* Page Title */}

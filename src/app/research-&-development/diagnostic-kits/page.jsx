@@ -8,11 +8,12 @@ export default function DiagnosticTestKitsPage() {
     <main className="text-white bg-black min-h-screen">
       <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
        <Image
-  src="/images/covid.jpeg" // apni image ka path yahan lagayein
+  src="/images/covid.jpeg" 
   alt="Banner Image"
   fill
   className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
 />
+
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/20 z-0" />
         <h1 className="relative z-10 text-3xl md:text-5xl font-bold">
             Diagnostic Test Kits
@@ -22,20 +23,24 @@ export default function DiagnosticTestKitsPage() {
       {/* Gradient Line */}
       <div className="w-full h-[10px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
 
+  
      {/* Bottom Navigation Links for RESEARCH AND DEVELOPMENT */}
 <div className="flex justify-center space-x-4 py-3 bg-black text-xs">
-  <Link href="/research-and-development/drugs-and-therapeutic-peptide" className="hover:underline text-gray-400">
+  <Link href="/research-&-development/drugs-&-peptides" className="hover:underline text-gray-400">
     Drugs and Therapeutic Peptide
   </Link>
-  <Link href="/research-and-development/vaccine-candidates" className="hover:underline text-gray-500">
+  <Link href="/research-&-development/vaccine-candidates" className="hover:underline text-gray-500">
     Vaccine Candidates
   </Link>
-  <Link href="/research-and-development/point-of-care-diagnostic-test-kits" className="hover:underline text-gray-500">
+  <Link href="/research-&-development/diagnostic-kits" className="hover:underline text-gray-500">
     Point of Care Diagnostic Test Kits
   </Link>
 </div>
 
-<div className="bg-white w-full py-16 px-4">
+ 
+
+
+/<div className="bg-white w-full py-16 px-4">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Left Side - Text */}
         <div className="md:w-1/2 space-y-6">

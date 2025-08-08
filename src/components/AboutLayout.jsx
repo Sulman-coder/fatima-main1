@@ -44,7 +44,7 @@ const leadershipData = [
     role: "Scientific Advisory Board Member",
     description:
       "Fellow of HEA 2017; PG Cert Academic Practice; Prince 2 – Project Management; PGCE Biology; PhD Biochemical Engineering; MSc Biomedical Sciences; BSc Industrial Microbiology",
-    image: "/leadership/image4.jpg",
+    image: "/leadership/image4.png",
   },
   {
     name: "Dr. Nídia Sequeira TROVÃO",
@@ -63,7 +63,7 @@ const leadershipData = [
     name: "Prof. Julius Kola Oloke",
     role: "Scientific Advisory Chairman",
     description: "PhD Microbiology",
-    image: "/leadership/image7.png",
+    image: "/leadership/image7.jpg",
   },
   {
     name: "Dr. Oladipo Elijah Kolawole",
@@ -85,17 +85,15 @@ function AboutLayout({ title, currentPage, children }) {
       : "text-blue-400";
 
   return (
-    <main className="text-white bg-black min-h-screen">
-      {/* Hero Section */}
-        <section className="relative w-full md:h-screen h-[60vh]">
-  <video
-    src="https://res.cloudinary.com/dqbtjrq1o/video/upload/v1754421913/video1_yum3sb.mp4"
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="absolute top-0 left-0 w-full h-full object-cover -z-20"
-  />
+
+    <main className="bg-gray-100 min-h-screen py-0 px-4">
+     <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
+                   <Image
+                     src="/images/about.jpeg"
+                     alt="Education Banner"
+                     fill
+                     className="object-cover opacity-60"
+                   />
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/20 z-0" />
         <h1 className="relative z-10 text-3xl md:text-5xl font-bold">
           Leadership
@@ -106,90 +104,58 @@ function AboutLayout({ title, currentPage, children }) {
       <div className="w-full h-[3px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
 
       {/* Bottom Navigation Links (Black Background) */}
-      <div className="flex justify-center space-x-4 py-3 bg-black text-xs">
-        <Link
-          href="/about/overview"
-          className={`hover:underline ${
-            currentPage === "About" ? bottomLinkColor : "text-gray-500"
-          }`}
-        >
-          About
-        </Link>
-        <Link
-          href="/about/leadership"
-          className={`hover:underline ${
-            currentPage === "Leadership" ? bottomLinkColor : "text-gray-500"
-          }`}
-        ></Link>
-        <Link
-          href="/about/history"
-          className={`hover:underline ${
-            currentPage === "History" ? bottomLinkColor : "text-gray-500"
-          }`}
-        >
-          History
-        </Link>
+   
+   <div className="max-w-6xl mx-auto bg-white text-gray-800 shadow-md rounded-md overflow-hidden my-10">
+    {/* Maroon Header */}
+    <div className="bg-[#800000] text-white text-xl sm:text-2xl font-bold py-3 px-4">
+      LEADERSHIP
+    </div>
+
+    {/* Gray Tabs */}
+    <div className="bg-gray-300 flex space-x-6 px-4 py-2 text-sm sm:text-base font-semibold text-gray-700">
+      <span className="text-gray-500">BOARD OF DIRECTORS</span>
+    </div>
+
+    {/* Cards Section */}
+    <div className="px-4 sm:px-6 py-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {leadershipData.map((leader, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-lg shadow p-4 flex flex-col items-center text-center hover:shadow-lg transition"
+          >
+            <Image
+              src={leader.image}
+              alt={leader.name}
+              width={120}
+              height={120}
+              className="rounded-full object-cover mb-3"
+            />
+            <h3 className="text-sm font-semibold mb-1">{leader.name}</h3>
+            <p className="text-xs text-gray-600 font-semibold">{leader.role}</p>
+            {leader.description && (
+              <p className="text-xs text-gray-500 mt-2">{leader.description}</p>
+            )}
+          </div>
+        ))}
       </div>
+    </div>
 
-      {/* Page Content */}
-      <div className="bg-[#F5F5F5] text-black py-10 px-4 sm:px-10">
-        {/* Breadcrumb */}
-        <div className="text-xs text-gray-500 mb-6">
-          Home &gt; About &gt; Leadership
-        </div>
 
-        <div className="bg-[#800000] text-white text-xl sm:text-2xl font-bold py-3 px-4 rounded-md mb-6">
-          LEADERSHIP
-        </div>
 
-        {/* Gray Section Titles */}
-        <div className="text-center mb-8 space-y-2">
-          <h2 className="text-base sm:text-lg font-semibold text-black">
-            INSTITUTIONAL LEADERSHIP
-          </h2>
-          <h2 className="text-base sm:text-lg font-semibold text-[#F0A500]">
-            BOARD OF DIRECTORS
-          </h2>
-        </div>
-
-        {/* Leadership Cards */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {leadershipData.map((leader, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition"
-            >
-              <Image
-                src={leader.image}
-                alt={leader.name}
-                width={120}
-                height={120}
-                className="rounded-full object-cover mb-3"
-              />
-              <h3 className="text-sm font-semibold mb-1">{leader.name}</h3>
-              <p className="text-xs text-gray-600 font-semibold">
-                {leader.role}
-              </p>
-              {leader.description && (
-                <p className="text-xs text-gray-500 mt-2">
-                  {leader.description}
-                </p>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <div className="flex justify-between text-xs text-gray-500 mt-12">
+{/* 
+         <div className="flex justify-between text-xs text-gray-500 mt-12">
           <Link href="/history" className="hover:underline">
             ← Previous: History
           </Link>
           <Link href="/about" className="hover:underline">
             Next: About →
           </Link>
-        </div>
-      </div>
+        // </div> */}
+      </div> 
 
       <div className="w-full h-[5px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-lg" />
+      
     </main>
   );
 }

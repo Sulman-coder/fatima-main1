@@ -7,15 +7,15 @@ export default function DivisionPage() {
   return (
     <main className="text-white bg-black min-h-screen">
       {/* Hero Section with Video */}
-<section className="relative w-full md:h-screen h-[60vh]">
-  <video
-    src="https://res.cloudinary.com/dqbtjrq1o/video/upload/v1754421913/video1_yum3sb.mp4"
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="absolute top-0 left-0 w-full h-full object-cover -z-20"
-  />
+{/* <section className="relative w-full md:h-screen h-[60vh]"> */}
+       <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
+
+ <Image
+              src="/images/about.jpeg"
+              alt="About Banner"
+              fill
+              className="object-cover opacity-60"
+            />
 
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/20 z-0" />
         <h1 className="relative z-10 text-3xl md:text-5xl font-bold">
@@ -27,15 +27,15 @@ export default function DivisionPage() {
       <div className="w-full h-[10px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
 
       {/* Bottom Navigation Links */}
-      <div className="flex justify-center space-x-4 py-3 bg-black text-xs">
-        <Link href="/science & medicine/overview" className="hover:underline text-gray-400">
-          Ovwerview
+      <div className="flex flex-wrap justify-center space-x-4 py-3 bg-black text-xs">
+        <Link href="/science-&-medicine/overview" className="hover:underline text-gray-400">
+          Overview
         </Link>
-        <Link href="/science & medicine/division" className="hover:underline text-gray-500">
+        <Link href="/science-&-medicine/division" className="hover:underline text-gray-500">
           Division
         </Link>
-       <Link href="/science & medicine/servicesS" className="hover:underline text-gray-500">
-        Services
+        <Link href="/science-&-medicine/services" className="hover:underline text-gray-500">
+          Services
         </Link>
       </div>
 
@@ -106,7 +106,7 @@ export default function DivisionPage() {
           </div>
         </div>
       </div>
-       <div className="w-full h-[10px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
+       <div className="w-full h-[7px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
 
     </main>
   );

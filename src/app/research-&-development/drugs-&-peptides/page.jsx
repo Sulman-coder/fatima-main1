@@ -25,13 +25,13 @@ export default function DrugsAndPeptidePage() {
 
      {/* Bottom Navigation Links for RESEARCH AND DEVELOPMENT */}
 <div className="flex justify-center space-x-4 py-3 bg-black text-xs">
-  <Link href="/research-and-development/drugs-and-therapeutic-peptide" className="hover:underline text-gray-400">
+  <Link href="/research-&-development/drugs-&-peptides" className="hover:underline text-gray-400">
     Drugs and Therapeutic Peptide
   </Link>
-  <Link href="/research-and-development/vaccine-candidates" className="hover:underline text-gray-500">
+  <Link href="/research-&-development/vaccine-candidates" className="hover:underline text-gray-500">
     Vaccine Candidates
   </Link>
-  <Link href="/research-and-development/point-of-care-diagnostic-test-kits" className="hover:underline text-gray-500">
+  <Link href="/research-&-development/diagnostic-kits" className="hover:underline text-gray-500">
     Point of Care Diagnostic Test Kits
   </Link>
 </div>

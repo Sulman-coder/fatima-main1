@@ -1,56 +1,80 @@
-import { FiCalendar, FiExternalLink } from "react-icons/fi";
-//  import { news } from "../../../../data/news";
-//  import { news } from "../../data/news";
-import { news } from "@/data/news";
 
+import Image from "next/image";
+import { FiCalendar, FiExternalLink } from "react-icons/fi";
+import { news } from "@/data/news";
+import Link from "next/link";
 
 
 export default function NewsCard() {
   return (
-    <div className="w-[100vw] min-h-[100vh] bg-white px-54 py-20">
-      <div className="flex flex-col md:flex-row w-full  overflow-hidden ml-20">
-      {/* Left - Image */}
-      <div className="w-full md:w-1/3 h-64 md:h-auto">
-        <img
-          src="https://www.helixbiogeninstitute.org/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdjrmhn005%2Fimage%2Fupload%2Fv1725107037%2Fhbiapi-uploads%2Fidbcppjvlzzzdyh8vqxc.jpg&w=1080&q=75"
-          alt="Research Lab"
-          className="w-full h-full object-cover"
+    <main className="bg-gray-100 min-h-screen">
+      {/* Hero Section */}
+      <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
+        <Image
+          src="/images/research.jpg"
+          alt="Research Banner"
+          fill
+          className="object-cover opacity-60"
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/20 z-0" />
+        <h1 className="relative z-10 text-4xl md:text-5xl font-bold text-white">
+          News & Prints
+        </h1>
+      </section>
+
+     <div className="w-full h-[5px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-lg" />
+
+ <div className="flex justify-center space-x-4 py-3 bg-black text-xs">
+        <Link href="/publication/research" className="hover:underline text-gray-400">
+          Research
+        </Link>
+        <Link
+          href="/publication/blogs"
+          className="hover:underline text-gray-500"
+        >
+          Blogs
+        </Link>
+        <Link href="/publication/news-prints" className="hover:underline text-gray-500">
+      News & Prints
+        </Link>
       </div>
 
-      {/* Right - Content */}
-      <div className="w-full md:w-1/2 bg-[#0F172A] text-white p-14 flex flex-col justify-between">
+
+      {/* Featured News Content */}
+      <div className="w-full md:w-3/4 mx-auto bg-[#0F172A] text-white p-10 md:p-14 flex flex-col gap-4 mb-10 rounded-lg shadow-md">
         {/* Date */}
-        <div className="flex items-center text-sm text-gray-300 mb-2">
+        <div className="flex items-center text-sm text-gray-300">
           <FiCalendar className="mr-2" />
           24th August, 2023
         </div>
 
         {/* Title */}
-        <h2 className="text-2xl font-bold leading-snug mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold leading-snug">
           Helix Biogen Institute And Anesvad Foundation Strengthens Biomedical Research In Oyo
         </h2>
 
         {/* Description */}
-        <p className="text-gray-400 mb-6">
+        <p className="text-gray-400">
           No excerpts provided for this news print; please follow the source link to read more.
         </p>
 
         {/* Button */}
-        <a
-          href="#"
-          className="inline-block text-lg text-center bg-gray-100 text-[#0A122A] font-medium px-6 py-3 rounded hover:bg-white transition"
-        >
-          Read More
-        </a>
-      </div>
+        <div>
+          <a
+            href="#"
+            className="inline-block text-lg bg-gray-100 text-[#0A122A] font-medium px-6 py-3 rounded hover:bg-white transition"
+          >
+            Read More
+          </a>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1  md:grid-cols-2 gap-6 px-20 py-10">
+      {/* All News Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-20 py-10">
         {news.map((item, index) => (
           <div
             key={index}
-            className="relative border border-gray-200  p-6 bg-white transition hover:bg-gray-200"
+            className="relative border border-gray-200 p-6 bg-white rounded-lg transition hover:bg-gray-200"
           >
             <a
               href={item.link}
@@ -65,7 +89,7 @@ export default function NewsCard() {
               {item.title}
             </h3>
 
-            <div className="flex items-center text-sm text-gray-500 mt-auto">
+            <div className="flex items-center text-sm text-gray-500">
               <FiCalendar className="mr-2" />
               {item.date}
             </div>
@@ -76,7 +100,7 @@ export default function NewsCard() {
           </div>
         ))}
       </div>
-
-    </div>
+      <div className="w-full h-[5px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-lg" />
+    </main>
   );
 }
