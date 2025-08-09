@@ -2,51 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FiCalendar } from "react-icons/fi";
-import { FiExternalLink } from "react-icons/fi";
-import { newsCards } from "@/data/newsCards";
+// import { FiCalendar } from "react-icons/fi";
+// import { FiExternalLink } from "react-icons/fi";
+// import { newsCards } from "@/data/newsCards";
 
-
-
-
-const cardData = [
-  {
-    title: "Research Departments",
-    desc: "Scripps Research faculty collaborate across six interrelated departments in pursuit of life-changing discoveries.",
-    img: "/images/card1.jpeg",
-    link: "#",
-  },
-  {
-    title: "Disease Areas & Medicines",
-    desc: "Scripps scientists decipher the underlying biological causes of disease and use that knowledge to revolutionize medicine and healthcare.",
-    img: "/images/card2.jpeg",
-    link: "#",
-  },
-  {
-    title: "Centers and Institutes",
-    desc: "A number of centers and institutes within Scripps Research focus resources on specific areas of investigation.",
-    img: "/images/card3.jpeg",
-    link: "#",
-  },
-  {
-    title: "Cores & Services",
-    desc: "The cores and services at Scripps Research provide access to the latest instrumentation, training and expertise.",
-    img: "/images/card4.jpeg",
-    link: "#",
-  },
-  {
-    title: "Calibr-Skaggs",
-    desc: "The Calibr-Skaggs Institute for Innovative Medicines accelerates the creation of new medicines by pairing biomedical research with discovery.",
-    img: "/images/card5.jpeg",
-    link: "#",
-  },
-  {
-    title: "Scripps Research Translational Institute",
-    desc: "The Scripps Research Translational Institute leverages progress in human genomics with the power of wireless digital technologies.",
-    img: "/images/card6.jpeg",
-    link: "#",
-  },
-];
 
 export default function OverviewPage() {
   return (
@@ -82,87 +41,128 @@ export default function OverviewPage() {
         </Link>
       </div>
 
-  <div className="w-full min-h-[45vh] bg-[#4187F6] flex items-center justify-center px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 py-10">
-  <div className="max-w-screen-lg mx-auto text-white flex flex-col justify-center">
-    <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-center md:text-left">
-      Discovering the Future: The Helix Biogen Institute <br className="hidden md:block" /> Research Update
-    </h2>
-    <p className="text-base sm:text-lg leading-relaxed text-center md:text-left">
-      Helix Biogen Institute is at the forefront of knowledge and innovation, driven by a passion for exploring the unseen realms of discovery.
-      Our team of experts is dedicated to uncovering new solutions to the world's most pressing challenges, and we are proud to share the latest
-      updates from our research initiatives. Our researchers are making significant advancements and contributions to the scientific community.
-      We are committed to investing in world-class infrastructure and fostering collaborations with leading institutions and industry partners to
-      ensure that our work has the maximum impact.
-    </p>
-  </div>
-</div>
  
-   
 
-
- {/* Featured News Content */}
-      <div className="w-full md:w-3/4 mx-auto bg-[#0F172A] text-white p-10 md:p-14 flex flex-col gap-4 mb-10 rounded-lg shadow-md">
-        {/* Date */}
-        <div className="flex items-center text-sm text-gray-300">
-          <FiCalendar className="mr-2" />
-          24th August, 2023
-        </div>
-
-        {/* Title */}
-        <h2 className="text-2xl md:text-3xl font-bold leading-snug">
-          Helix Biogen Institute And Anesvad Foundation Strengthens Biomedical Research In Oyo
-        </h2>
-
-        {/* Description */}
-        <p className="text-gray-400">
-          No excerpts provided for this news print; please follow the source link to read more.
-        </p>
-
-        {/* Button */}
+    <section className="bg-white py-16 px-6 md:px-16 lg:px-24">
+      {/* Overview */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <a
-            href="#"
-            className="inline-block text-lg bg-gray-100 text-[#0A122A] font-medium px-6 py-3 rounded hover:bg-white transition"
-          >
-            Read More
-          </a>
+          <h2 className="text-4xl font-bold mb-6 text-gray-800">
+            Overview
+          </h2>
+          <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+            At <strong>Helix Biogen Institute</strong>, we’re passionate about pushing the frontiers of science. 
+            Specializing in advanced “omics” fields like bioinformatics, molecular biology, and AI-driven life sciences, 
+            we aim to empower researchers and innovators worldwide.
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            From groundbreaking research in Molecular Biology, Microbiology, Virology, and Immunology 
+            to specialized training programs, workshops, and global collaborations — our mission is to create 
+            lasting impact in science and healthcare.
+          </p>
+        </div>
+        <div>
+          <Image
+            src="/leadership/image10.jpg"
+            alt="Molecular Biology"
+            width={800}
+            height={500}
+            className="rounded-2xl shadow-lg object-cover"
+            style={{ width: "100%", height: "auto" }}
+          />
         </div>
       </div>
 
-      {/* All News Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-20 py-10">
-        {/* {news.map((item, index) => ( */}
-        {newsCards.map((item, index) => (
+      {/* Services */}
+      <div className="mt-20">
+        <h3 className="text-3xl font-bold text-center text-gray-800 mb-12">
+          What We Offer
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Molecular Biology Training",
+              desc: "Hands-on training and expert support for researchers in molecular biology techniques and bioinformatics.",
+              img: "/leadership/image11.jpg"
+            },
+            {
+              title: "AI in Life Sciences",
+              desc: "Harnessing artificial intelligence for advanced biological data analysis and research innovation.",
+              img: "/leadership/image12.webp"
+            },
+            {
+              title: "Lab Project Support",
+              desc: "From methodology design to advanced lab techniques, we support projects in microbiology and immunology.",
+                 img: "/leadership/image13.jpg"
+       }
+          ].map((service, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            >
+              <img src={service.img} alt={service.title} className="h-56 w-full object-cover" />
+              <div className="p-6">
+                <h4 className="text-xl font-semibold text-gray-800 mb-3">
+                  {service.title}
+                </h4>
+                <p className="text-gray-600 leading-relaxed">
+                  {service.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
+      {/* Detailed Service Sections */}
+      <div className="mt-20 space-y-20">
+        {[
+          {
+            title: "Molecular Biology Courses",
+            desc: "We provide training, support, and bioinformatics consultancy to researchers. Our services include bioinformatics analysis planning, data management, and workshops tailored to academic and research needs.",
+            img: "/leadership/image14.jpg",
+            reverse: false
+          },
+          {
+            title: "Artificial Intelligence in Life Sciences",
+            desc: "With the rise of microbial sequencing, AI offers powerful ways to analyze vast biological datasets. We apply AI/ML to translate data into real-world biomedical solutions.",
+            img: "/leadership/image15.jpg",
+            reverse: true
+          },
+          {
+            title: "Laboratory Project Facilitation",
+            desc: "We assist in molecular cloning, nucleic acid extraction, primer design, gene sequencing, and microbiology services including bacterial/fungal culture, antimicrobial testing, and air quality analysis.",
+            img: "/leadership/image16.jpg",
+            reverse: false
+          }
+        ].map((item, index) => (
           <div
             key={index}
-            className="relative border border-gray-200 p-6 bg-white rounded-lg transition hover:bg-gray-200"
+            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+              item.reverse ? "lg:flex-row-reverse" : ""
+            }`}
           >
-            <a
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute top-4 right-4 text-gray-400 hover:text-blue-600"
-            >
-              <FiExternalLink size={16} />
-            </a>
-
-            <h3 className="text-xl font-semibold text-gray-800 mb-3 pr-6">
-              {item.title}
-            </h3>
-
-            <div className="flex items-center text-sm text-gray-500">
-              <FiCalendar className="mr-2" />
-              {item.date}
+            <div>
+              <h4 className="text-2xl font-bold text-gray-800 mb-4">
+                {item.title}
+              </h4>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                {item.desc}
+              </p>
             </div>
-
-            <p className="text-sm text-gray-400 mt-2">
-              No excerpts provided for this news print; please follow the source link to read more.
-            </p>
+            <div>
+              <img
+                src={item.img}
+                alt={item.title}
+                className="rounded-2xl shadow-lg w-full h-full object-cover"
+              />
+            </div>
           </div>
         ))}
+      </div>
+    </section>
 
-</div>
+
       {/* Bottom Gradient Line */}
       <div className="w-full h-[10px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
     </main>

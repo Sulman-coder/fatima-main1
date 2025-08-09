@@ -103,6 +103,23 @@ function AboutLayout({ title, currentPage, children }) {
       {/* Gradient Line */}
       <div className="w-full h-[3px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
 
+{/* Bottom Navigation Links */}
+      <div className="flex justify-center space-x-4 py-3 bg-black text-xs">
+        <Link href="/about/overview" className="hover:underline text-gray-400">
+          Overview
+        </Link>
+        <Link
+          href="/about/leadership"
+          className="hover:underline text-gray-500"
+        >
+          Leadership
+        </Link>
+        <Link href="/about/history" className="hover:underline text-gray-500">
+          History
+        </Link>
+      </div>
+
+
       {/* Bottom Navigation Links (Black Background) */}
    
    <div className="max-w-6xl mx-auto bg-white text-gray-800 shadow-md rounded-md overflow-hidden my-10">
