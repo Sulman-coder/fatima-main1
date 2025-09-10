@@ -6,7 +6,7 @@ export default function LeadershipPage() {
        {/* Hero Section */}
         <section className="relative w-full md:h-screen h-[60vh]">
         <img
-          src="/images/about.jpeg"
+          src="/images/science.jpg"
           alt="Banner Image"
           // className="absolute top-0 left-0 w-full h- object-cover opacity-60"
            className="absolute top-0 left-0 w-full h-full object-cover -z-20"

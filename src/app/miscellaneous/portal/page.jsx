@@ -22,6 +22,8 @@ const PortalPage = () => {
       <div className="w-full h-[3px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
 
       <h1 className="text-4xl font-bold mb-6 text-center">Portal</h1>
+
+      
       <p className="text-lg mb-8 text-gray-700 text-center">
         Access dedicated sections for students, researchers, and staff. Log in to explore tools, resources, and personalized dashboards.
       </p>

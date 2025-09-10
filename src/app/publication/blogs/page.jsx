@@ -101,8 +101,19 @@ const BlogsPage = () => {
 
 
       {/* Blogs */}
-      <section className="px-6 md:px-32 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="px-2 md:px-32 py-8 pb-8">
+         {/* <div className="flex text-xs gap-2 text-black py-2"> */}
+         <div className="flex text-xs gap-2 text-black pt-1 pb-8">
+
+                        <Link href="/publication/research" className="hover:underline">
+                         Research
+                        </Link>
+                        <Link href="/publication/news-prints" className="hover:underline">
+                         News $ Prints
+                        </Link>
+                       </div> 
+                        <div className="w-full h-px bg-gray-500" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8">
           {blogPosts.map((blog, index) => (
             <div
               key={index}

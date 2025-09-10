@@ -89,7 +89,7 @@ function AboutLayout({ title, currentPage, children }) {
     <main className="bg-gray-100 min-h-screen py-0 px-4">
      <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
                    <Image
-                     src="/images/about.jpeg"
+                     src="/images/science.jpg"
                      alt="Education Banner"
                      fill
                      className="object-cover opacity-60"
@@ -118,7 +118,16 @@ function AboutLayout({ title, currentPage, children }) {
           History
         </Link>
       </div>
-
+       <div className="flex text-xs gap-4 text-gray-500 mt-6">
+          <Link href="/about/history" className="hover:underline">
+           History
+          </Link>
+          <Link href="/about/overview" className="hover:underline">
+           Overview 
+          </Link>
+         </div> 
+                <div className="w-full h-px bg-gray-500" />
+          
 
       {/* Bottom Navigation Links (Black Background) */}
    
@@ -127,6 +136,8 @@ function AboutLayout({ title, currentPage, children }) {
     <div className="bg-[#800000] text-white text-xl sm:text-2xl font-bold py-3 px-4">
       LEADERSHIP
     </div>
+
+
 
     {/* Gray Tabs */}
     <div className="bg-gray-300 flex space-x-6 px-4 py-2 text-sm sm:text-base font-semibold text-gray-700">
@@ -160,15 +171,15 @@ function AboutLayout({ title, currentPage, children }) {
 
 
 
-{/* 
-         <div className="flex justify-between text-xs text-gray-500 mt-12">
+
+         {/* <div className="flex justify-between text-xs text-gray-500 mt-12">
           <Link href="/history" className="hover:underline">
             ← Previous: History
           </Link>
           <Link href="/about" className="hover:underline">
             Next: About →
           </Link>
-        // </div> */}
+         </div>  */}
       </div> 
 
       <div className="w-full h-[5px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-lg" />

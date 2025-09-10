@@ -49,7 +49,7 @@ export default function ServicesPage() {
       {/* <section className="relative w-full md:h-screen h-[40vh] flex items-center justify-center text-center"> */}
        <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
      <Image
-             src="/images/about.jpeg"
+             src="/images/science.jpg"
              alt="About Banner"
              fill
              className="object-cover opacity-60"

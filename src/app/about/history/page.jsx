@@ -8,16 +8,17 @@ export default function HistoryPage() {
 
   return (
       //  <main className="text-white bg-black min-h-screen">
-    <main className="bg-gray-100 min-h-screen py-10 px-4">
+    // <main className="bg-gray-100 min-h-screen py-10 px-4">
+      <main className="text-white bg-gray-100 min-h-screen px-4">
 
       {/* Hero Section */}
       {/* <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center"> */}
          <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
               <Image
-                src="/images/about.jpeg"
+                src="/images/science.jpg"
                 alt="Education Banner"
                 fill
-                className="object-cover opacity-60"
+                className="object-cover"
               />
        
          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/20 z-0" />
@@ -39,7 +40,7 @@ export default function HistoryPage() {
         </Link>
         <Link
           href="/about/leadership"
-          className={`hover:underline ${
+          className={`hover:underline npm run dev${
             currentPage === "Leadership" ? bottomLinkColor : "text-gray-500"
           }`}
         >Leadership</Link>
@@ -53,8 +54,21 @@ export default function HistoryPage() {
         </Link>
       </div>
 
-       <div className="text-center mb-8 my-15">
-        <h1 className="text-2xl sm:text-3xl font-bold text-center text-blue-900 mb-6">
+
+       <div className="text-center mb-8 my-4 px-12">
+         {/* Overview Section */}
+        <div className="flex text-xs gap-4 text-black py-2">
+                <Link href="/about/leadership" className="hover:underline">
+                 Leadership
+                </Link>
+                <Link href="/about/overview" className="hover:underline">
+                 Overview
+                </Link>
+               </div> 
+                <div className="w-full h-px bg-gray-500" />
+             
+
+       <h1 className="text-2xl sm:text-3xl font-bold text-center text-blue-900 mb-6 py-6 px-12">
   History of Helix Biogen Institute
 </h1>
 
@@ -69,83 +83,88 @@ export default function HistoryPage() {
       
     </div>
  
-
-  {/* Timeline Blocks */}
-  <div className="space-y-10">
-    {/* 1. Founding */}
-    <div>
-      <h3 className="text-lg font-semibold text-blue-900 mb-1">
-        1. Founding of Helix Biogen Consult <span className="text-sm text-gray-500">(Late 2019)</span>
-      </h3>
-      <p className="text-gray-700 mb-2">
-        Helix Biogen Consult was established as a consultancy firm to provide expert services in biomedical research, diagnostics, and biotechnology solutions.
-      </p>
-      <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
-        <li>Hands-on training in molecular biology techniques.</li>
-        <li>Collaborations with academic institutions on lab capacity-building.</li>
-        <li>Preliminary research on diagnostics and vaccine approaches.</li>
-      </ul>
-    </div>
-
-    {/* 2. Expansion */}
-    <div>
-      <h3 className="text-lg font-semibold text-blue-900 mb-1">
-        2. Expansion to Research-Based Projects <span className="text-sm text-gray-500">(2020)</span>
-      </h3>
-      <p className="text-gray-700 mb-2">
-        During COVID-19, the organization pivoted to applied biomedical research including vaccine development.
-      </p>
-      <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
-        <li>Initiated COVID-19 vaccine research for African populations.</li>
-        <li>Vaccine candidate recognized by WHO in the global landscape.</li>
-      </ul>
-    </div>
-
-    {/* 3. Transition */}
-    <div>
-      <h3 className="text-lg font-semibold text-blue-900 mb-1">
-        3. Transition to a Biomedical Research Institute <span className="text-sm text-gray-500">(Mid-2021)</span>
-      </h3>
-      <p className="text-gray-700 mb-2">
-        To reflect its expanded mission, Helix Biogen transitioned into a biomedical institute.
-      </p>
-      <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
-        <li>Founded a research hub in Ogbomoso, Nigeria.</li>
-        <li>Secured local and international academic and industry partnerships.</li>
-        <li>Expanded into translational genomics and diagnostic kit development.</li>
-      </ul>
-    </div>
-
-    {/* 4. Key Achievements */}
-    <div>
-      <h3 className="text-lg font-semibold text-blue-900 mb-1">
-        4. Key Achievements as Helix Biogen Institute <span className="text-sm text-gray-500">(2022 – Present)</span>
-      </h3>
-      <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
-        <li>Advanced preclinical work on COVID-19 vaccine candidate.</li>
-        <li>Developed point-of-care diagnostic kits for Africa CDC-prioritized pathogens.</li>
-        <li>Published mRNA vaccine studies for vaccinia and Mpox viruses.</li>
-        <li>Hosted biotech entrepreneurship and lab training programs.</li>
-        <li>Collaborated with Africa CDC and public health agencies.</li>
-      </ul>
-    </div>
-
-    {/* Vision */}
-    <div className="bg-gray-100 rounded-md p-4 mt-6">
-      <h3 className="text-lg font-semibold text-[#800000] mb-2">The Vision of Helix Biogen Institute</h3>
-      <p className="text-sm text-gray-700">
-        Today, Helix Biogen Institute stands as a leading African biomedical research hub, focused on:
-      </p>
-      <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1 mt-2">
-        <li>Developing innovative diagnostics and vaccines for Africa’s healthcare needs.</li>
-        <li>Fostering local biotech innovation and scientific capacity.</li>
-        <li>Driving global collaborations for impactful public health outcomes.</li>
-      </ul>
-    </div>
+  <div className="max-w-3xl mx-auto px-4 space-y-10">
+  {/* 1. Founding */}
+  <div>
+    <h3 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2 text-center md:text-left">
+      1. Founding of Helix Biogen Consult <span className="text-sm text-gray-500">(Late 2019)</span>
+    </h3>
+    <p className="text-gray-700 mb-3 text-center md:text-left">
+      Helix Biogen Consult was established as a consultancy firm to provide expert services in biomedical research, diagnostics, and biotechnology solutions.
+    </p>
+    <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
+      <li>Hands-on training in molecular biology techniques.</li>
+      <li>Collaborations with academic institutions on lab capacity-building.</li>
+      <li>Preliminary research on diagnostics and vaccine approaches.</li>
+    </ul>
   </div>
+
+  {/* 2. Expansion */}
+  <div>
+    <h3 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2 text-center md:text-left">
+      2. Expansion to Research-Based Projects <span className="text-sm text-gray-500">(2020)</span>
+    </h3>
+    <p className="text-gray-700 mb-3 text-center md:text-left">
+      During COVID-19, the organization pivoted to applied biomedical research including vaccine development.
+    </p>
+    <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
+      <li>Initiated COVID-19 vaccine research for African populations.</li>
+      <li>Vaccine candidate recognized by WHO in the global landscape.</li>
+    </ul>
+  </div>
+
+  {/* 3. Transition */}
+  <div>
+    <h3 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2 text-center md:text-left">
+      3. Transition to a Biomedical Research Institute <span className="text-sm text-gray-500">(Mid-2021)</span>
+    </h3>
+    <p className="text-gray-700 mb-3 text-center md:text-left">
+      To reflect its expanded mission, Helix Biogen transitioned into a biomedical institute.
+    </p>
+    <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
+      <li>Founded a research hub in Ogbomoso, Nigeria.</li>
+      <li>Secured local and international academic and industry partnerships.</li>
+      <li>Expanded into translational genomics and diagnostic kit development.</li>
+    </ul>
+  </div>
+
+  {/* 4. Key Achievements */}
+  <div>
+    <h3 className="text-xl md:text-2xl font-semibold text-blue-900 mb-2 text-center md:text-left">
+      4. Key Achievements as Helix Biogen Institute <span className="text-sm text-gray-500">(2022 – Present)</span>
+    </h3>
+    <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
+      <li>Advanced preclinical work on COVID-19 vaccine candidate.</li>
+      <li>Developed point-of-care diagnostic kits for Africa CDC-prioritized pathogens.</li>
+      <li>Published mRNA vaccine studies for vaccinia and Mpox viruses.</li>
+      <li>Hosted biotech entrepreneurship and lab training programs.</li>
+      <li>Collaborated with Africa CDC and public health agencies.</li>
+    </ul>
+  </div>
+
+  {/* Vision */}
+  <div className="bg-gray-100 rounded-lg p-6 mt-8 shadow-sm">
+    <h3 className="text-xl md:text-2xl font-semibold text-[#800000] mb-3 text-center md:text-left">
+      The Vision of Helix Biogen Institute
+    </h3>
+    <p className="text-sm text-gray-700 text-center md:text-left">
+      Today, Helix Biogen Institute stands as a leading African biomedical research hub, focused on:
+    </p>
+    <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1 mt-2">
+      <li>Developing innovative diagnostics and vaccines for Africa’s healthcare needs.</li>
+      <li>Fostering local biotech innovation and scientific capacity.</li>
+      <li>Driving global collaborations for impactful public health outcomes.</li>
+    </ul>
+  </div>
+</div>
+
+ 
+
+
 
     </div>
      <div className="w-full h-[3px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-md" />
     </main>
   );
 }
+

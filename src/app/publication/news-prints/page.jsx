@@ -40,8 +40,23 @@ export default function NewsCard() {
       </div>
 
 
+    {/* <div className="flex text-xs gap-2 text-black pt-1 pb-20 px-6"> */}
+        <div className="flex text-xs gap-4 text-white-500 py-4 pb-8 mx-12">
+
+  
+                          <Link href="/publication/research" className="hover:underline">
+                           Research
+                          </Link>
+                          <Link href="/publication/blogs" className="hover:underline">
+                           Blogs
+                          </Link>
+                         </div> 
+                          <div className="w-full h-px bg-gray-500"/>
+
       {/* Featured News Content */}
-      <div className="w-full md:w-3/4 mx-auto bg-[#0F172A] text-white p-10 md:p-14 flex flex-col gap-4 mb-10 rounded-lg shadow-md">
+       {/* <div className="w-full md:w-3/4 mx-auto bg-[#0F172A] text-white p-10 md:p-14 flex flex-col gap-4 mb-10 rounded-lg shadow-md py-8"> */}
+  <div className="w-full md:w-3/4 mx-auto bg-[#0F172A] text-white p-10 md:p-14 flex flex-col gap-4 mt-10 mb-10 rounded-lg shadow-md">
+
         {/* Date */}
         <div className="flex items-center text-sm text-gray-300">
           <FiCalendar className="mr-2" />

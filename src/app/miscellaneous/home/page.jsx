@@ -3,6 +3,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+
+// import { newsCards } from "../data/newsCards";
 import { newsCards } from "@/data/newsCards";
 
 
@@ -12,7 +14,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* Hero Section */}
-           <section className="relative w-full md:h-screen h-[60vh]">
+      <section className="relative w-full md:h-screen h-[60vh]">
   <video
     src="https://res.cloudinary.com/dqbtjrq1o/video/upload/v1754421913/video1_yum3sb.mp4"
     autoPlay
@@ -33,8 +35,8 @@ export default function Home() {
       <div className="w-full h-[5px] bg-gradient-to-r from-orange-500 via-yellow-400 to-blue-600 shadow-lg" />
 
       {/* Section 1: Dark Blue Background with Logo Right */}
-      <section className="relative bg-[#0A1A2F] text-white py-16 sm:py-20 lg:py-28 px-4 sm:px-8 md:px-16 lg:px-24 overflow-hidden">
-        {/* <div className="absolute right-0 top-0 h-full w-1/2 opacity-10 hidden md:block"> */}
+     <section className="relative bg-[#0A1A2F] text-white py-16 sm:py-20 lg:py-28 px-4 sm:px-8 md:px-16 lg:px-24 overflow-hidden">
+         {/* <div className="absolute right-0 top-0 h-full w-1/2 opacity-10 hidden md:block"> */}
         <div className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 translate-x-8 opacity-10 z-0 hidden md:block">
           <Image
             src="/images/logo2.png"
@@ -45,7 +47,10 @@ export default function Home() {
             className="object-contain object-right"
           />
         </div>
-        <div className="relative z-10 max-w-4xl lg:px-24 md:px-16 px-3 space-y-6">
+         {/* <div className="relative z-10 max-w-4xl lg:px-24 md:px-16 px-3 space-y-6"> */}
+             {/* <section className="px-6 lg:px-24 md:px-16 py-12 bg-white">  */}
+                {/* <div className="relative z-10 max-w-4xl lg:px-24 md:px-16 px-3 space-y-6">  */}
+               <div className="relative z-10 text-white max-w-5xl mx-auto p-6 sm:p-10 space-y-6 shadow-md">
           <h2 className="text-[#F0A500] text-4xl md:text-5xl font-semibold leading-tight">
             Advancing Science for Global Impact
           </h2>
@@ -64,12 +69,13 @@ export default function Home() {
             institutes provide state-of-the-art laboratories, computational
             tools, and expert resources to support groundbreaking discoveries.
           </p>
-          <Link href="/about">
+          <Link href="/about/overview">
             <button className="mt-2 px-6 py-3 bg-[#F0A500] text-[#06152B] font-medium hover:bg-[#d48f00] transition">
               Read More
             </button>
           </Link>
-        </div>
+         </div>
+      
       </section>
 
       {/* Section 2: Text + Images */}
@@ -122,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* Section 2: Blue Box Section */}
-      <section className="relative bg-white py-20 px-4 sm:px-8 overflow-hidden">
+      <section className="relative bg-black py-20 px-4 sm:px-8 overflow-hidden">
         {/* <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-10 mix-blend-overlay hidden md:block"> */}
         <div className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 translate-x-8 opacity-10 z-0 hidden md:block">
           <Image
@@ -137,17 +143,24 @@ export default function Home() {
           <h2 className="text-[#F0A500] text-3xl sm:text-4xl font-medium">
             Driving Scientific Discovery
           </h2>
-          <p className="text-[#E0E0E0] leading-relaxed">
+          {/* <p className="text-[#E0E0E0] leading-relaxed"> */}
+          <p className="text-lg md:text-xl leading-relaxed">
+
             A research institute is an organization dedicated to conducting
             scientific investigations, advancing knowledge, and developing
             innovative solutions across various fields.
           </p>
-          <p className="text-[#E0E0E0] leading-relaxed">
+
+          {/* <p className="text-[#E0E0E0] leading-relaxed"> */}
+          <p className="text-lg md:text-xl leading-relaxed">
+
             These institutions focus on disciplines such as medicine,
             engineering, environmental science, and artificial intelligence,
             contributing to technological progress and societal well-being.
           </p>
-          <p className="text-[#E0E0E0] leading-relaxed">
+          {/* <p className="text-[#E0E0E0] leading-relaxed"> */}
+          <p className="text-lg md:text-xl leading-relaxed">
+
             Funded by governments, private organizations, and grants, research
             institutes provide state-of-the-art laboratories, computational
             tools, and expert resources to support groundbreaking discoveries.
@@ -165,17 +178,18 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl text-orange-400 font-semibold mb-6">
               Amplifying Investment in Science
             </h2>
-            <p className="mb-4">
+            {/* <p className="mb-4"> */}
+             <p className="text-lg md:text-xl leading-relaxed">
               A research institute is an organization dedicated to conducting
               scientific investigations, advancing knowledge, and developing
               innovative solutions across various fields.
             </p>
-            <p className="mb-4">
+             <p className="text-lg md:text-xl leading-relaxed">
               These institutions focus on disciplines such as medicine,
               engineering, environmental science, and artificial intelligence,
               contributing to technological progress.
             </p>
-            <p className="mb-4">
+             <p className="text-lg md:text-xl leading-relaxed">
               Researchers collaborate on projects, analyze data, and publish
               findings to inform academic and industrial advancement.
             </p>

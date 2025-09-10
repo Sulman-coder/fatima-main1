@@ -10,13 +10,12 @@ export default function DivisionPage() {
 {/* <section className="relative w-full md:h-screen h-[60vh]"> */}
        <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
 
- <Image
-              src="/images/about.jpeg"
-              alt="About Banner"
-              fill
-              className="object-cover opacity-60"
-            />
-
+             <Image
+                              src="/images/science.jpg"
+                              alt="Education Banner"
+                              fill
+                              className="object-cover opacity-60"
+                            />
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/20 z-0" />
         <h1 className="relative z-10 text-3xl md:text-5xl font-bold">
             Division
@@ -40,12 +39,23 @@ export default function DivisionPage() {
       </div>
 
 
-
-      <div className="space-y-12 px-4 md:px-12 py-8">
+              <div className="w-full h-px bg-gray-700" />
+          
+      <div className="space-y-12 px-8 md:px-18 py-8">
+                <div className="flex text-xs gap-4 text-white-500 py-2">
+                        <Link href="/scienc-&-medicine/overview" className="hover:underline">
+                         Overview
+                        </Link>
+                        <Link href="/science-&-medicine/services" className="hover:underline">
+                         Services
+                        </Link>
+                       </div> 
+              <div className="w-full h-px bg-gray-700" />
         {/* Molecular Biology Division */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+
           <div className="md:w-1/2">
-            <h2 className="text-2xl font-bold text-blue-400 mb-4">
+            <h2 className="text-2xl font-bold text-blue-400 mb-1">
               A. Molecular Biology Division
             </h2>
             <p className="mb-4">
@@ -60,8 +70,11 @@ export default function DivisionPage() {
               <li>Gene sequencing and whole-genome sequencing</li>
             </ul>
           </div>
-          <div className="md:w-1/2">
+          {/* <div className="md:w-1/2">
             <img src="/images/card7.png" alt="Molecular Biology" className="w-full rounded-xl shadow-md" />
+          </div> */}
+          <div className="md:w-1/2">
+            <img src="/images/division.jpg" alt="Immunology" className="w-full rounded-xl shadow-md" />
           </div>
         </div>
 
@@ -102,7 +115,7 @@ export default function DivisionPage() {
             </ul>
           </div>
           <div className="md:w-1/2">
-            <img src="/images/about.jpeg" alt="Immunology" className="w-full rounded-xl shadow-md" />
+            <img src="/images/card2.jpeg" alt="Immunology" className="w-full rounded-xl shadow-md" />
           </div>
         </div>
       </div>

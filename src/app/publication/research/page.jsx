@@ -48,8 +48,19 @@ export default function ResearchPage() {
 
 
   {/* Research Update Section */}
-  <div className="w-full bg-white py-10 px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32">
-    <div className="bg-[#4187F6] text-white rounded-lg p-6 md:p-10 lg:p-14 shadow-md">
+  <div className="w-full bg-[#610F37] py-10 px-6 sm:px-8 md:px-12 lg:px-24 xl:px-32">
+    <div className="flex text-xs gap-2 text-white py-2 pb-6">
+                <Link href="/publication/blogs" className="hover:underline">
+                 Blogs
+                </Link>
+                <Link href="/publication/news-prints" className="hover:underline">
+                 News $ Prints
+                </Link>
+               </div> 
+                <div className="w-full h-px bg-gray-500" />
+    {/* <div className="bg-[#800000] text-white rounded-lg p-6 md:p-10 lg:p-14 shadow-md"> */}
+      <div className=" text-white py-4 px-6 md:px-12">
+
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 leading-snug">
         Discovering the Future: The Helix Biogen Institute <br className="hidden md:block" /> Research Update
       </h2>

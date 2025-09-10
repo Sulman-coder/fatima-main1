@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+// import { FaGraduationCap, FaMicroscope } from "react-icons/fa";
+
+
 // import { FiCalendar } from "react-icons/fi";
 // import { FiExternalLink } from "react-icons/fi";
 // import { newsCards } from "@/data/newsCards";
@@ -13,7 +16,7 @@ export default function OverviewPage() {
       {/* Hero Section with Video and Centered Text */}
            <section className="relative w-full h-[40vh] overflow-hidden flex items-center justify-center">
            <Image
-                   src="/images/about.jpeg"
+                   src="/images/science.jpg"
                    alt="About Banner"
                    fill
                    className="object-cover opacity-60"
@@ -43,19 +46,35 @@ export default function OverviewPage() {
 
  
 
-    <section className="bg-white py-16 px-6 md:px-16 lg:px-24">
+    {/* <section className="bg-white py-16 px-6 md:px-16 lg:px-24"> */}
+
+      <section className="bg-[#610F37] text-white py-4 px-4 md:px-12 pb-6">
+        <div className="flex text-xs gap-4 text-white-500 py-2">
+                <Link href="/science-&-medicine/division" className="hover:underline">
+                 Division
+                </Link>
+                <Link href="/science-&-medicine/services" className="hover:underline">
+                Services
+                </Link>
+               </div> 
+
+
+                <div className="w-full h-px bg-gray-700" />
+
+
+
       {/* Overview */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-10">
         <div>
-          <h2 className="text-4xl font-bold mb-6 text-gray-800">
+          <h2 className="text-4xl font-bold mb-6 text-white">
             Overview
           </h2>
-          <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+          <p className="text-lg text-white mb-4 leading-relaxed">
             At <strong>Helix Biogen Institute</strong>, we’re passionate about pushing the frontiers of science. 
             Specializing in advanced “omics” fields like bioinformatics, molecular biology, and AI-driven life sciences, 
             we aim to empower researchers and innovators worldwide.
           </p>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-lg text-white leading-relaxed">
             From groundbreaking research in Molecular Biology, Microbiology, Virology, and Immunology 
             to specialized training programs, workshops, and global collaborations — our mission is to create 
             lasting impact in science and healthcare.
@@ -72,95 +91,60 @@ export default function OverviewPage() {
           />
         </div>
       </div>
+  </section>
 
-      {/* Services */}
-      <div className="mt-20">
-        <h3 className="text-3xl font-bold text-center text-gray-800 mb-12">
-          What We Offer
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Molecular Biology Training",
-              desc: "Hands-on training and expert support for researchers in molecular biology techniques and bioinformatics.",
-              img: "/leadership/image11.jpg"
-            },
-            {
-              title: "AI in Life Sciences",
-              desc: "Harnessing artificial intelligence for advanced biological data analysis and research innovation.",
-              img: "/leadership/image12.webp"
-            },
-            {
-              title: "Lab Project Support",
-              desc: "From methodology design to advanced lab techniques, we support projects in microbiology and immunology.",
-                 img: "/leadership/image13.jpg"
-       }
-          ].map((service, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
-            >
-              <img src={service.img} alt={service.title} className="h-56 w-full object-cover" />
-              <div className="p-6">
-                <h4 className="text-xl font-semibold text-gray-800 mb-3">
-                  {service.title}
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  {service.desc}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
-      {/* Detailed Service Sections */}
-      <div className="mt-20 space-y-20">
-        {[
-          {
-            title: "Molecular Biology Courses",
-            desc: "We provide training, support, and bioinformatics consultancy to researchers. Our services include bioinformatics analysis planning, data management, and workshops tailored to academic and research needs.",
-            img: "/leadership/image14.jpg",
-            reverse: false
-          },
-          {
-            title: "Artificial Intelligence in Life Sciences",
-            desc: "With the rise of microbial sequencing, AI offers powerful ways to analyze vast biological datasets. We apply AI/ML to translate data into real-world biomedical solutions.",
-            img: "/leadership/image15.jpg",
-            reverse: true
-          },
-          {
-            title: "Laboratory Project Facilitation",
-            desc: "We assist in molecular cloning, nucleic acid extraction, primer design, gene sequencing, and microbiology services including bacterial/fungal culture, antimicrobial testing, and air quality analysis.",
-            img: "/leadership/image16.jpg",
-            reverse: false
-          }
-        ].map((item, index) => (
-          <div
-            key={index}
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-              item.reverse ? "lg:flex-row-reverse" : ""
-            }`}
-          >
-            <div>
-              <h4 className="text-2xl font-bold text-gray-800 mb-4">
-                {item.title}
-              </h4>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-            <div>
-              <img
-                src={item.img}
-                alt={item.title}
-                className="rounded-2xl shadow-lg w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+
+    {/* Services & Divisions Cards */}
+<section className="bg-gray-100 text-black py-10 px-4 sm:px-14 grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
+  {/* Services Card */}
+  <div className="bg-white shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition rounded-lg w-full max-w-sm">
+    {/* Image */}
+    <div className="w-full h-56 bg-gray-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+      <Image
+        src="/images/services2.png"
+        alt="Our Services"
+        width={400}
+        height={280}
+        className="object-cover w-full h-full"
+      />
+    </div>
+
+    <h3 className="text-lg font-semibold mb-2">Our Services</h3>
+    <p className="text-sm text-gray-700">
+      Molecular biology training & bioinformatics support.<br />
+      AI solutions for biological data analysis.<br />
+      Lab project facilitation & microbiology services.
+    </p>
+  </div>
+
+  {/* Divisions Card */}
+  <div className="bg-white shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition rounded-lg w-full max-w-sm">
+    {/* Image */}
+    <div className="w-full h-56 bg-gray-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+      <Image
+        src="/images/division.jpg"
+        alt="Our Divisions"
+        width={400}
+        height={280}
+        className="object-cover w-full h-full"
+      />
+    </div>
+
+    <h3 className="text-lg font-semibold mb-2">Our Divisions</h3>
+    <p className="text-sm text-gray-700">
+      <strong>Training:</strong> Courses & workshops in molecular biology.<br />
+      <strong>Research & AI:</strong> AI-driven data analysis & innovation.<br />
+      <strong>Lab Support:</strong> Molecular techniques & project assistance.
+    </p>
+  </div>
+</section>
+
+
+
+            
+
+
 
 
       {/* Bottom Gradient Line */}
