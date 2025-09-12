@@ -12,7 +12,7 @@ export default function ProfessionalCertificatesPage() {
        src="/images/education.jpg"
        alt="Education Banner"
        fill
-       className="object-cover opacity-60"
+       className="object-cover"
      />
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/20 z-0" />
         <h1 className="relative z-10 text-white text-3xl md:text-5xl font-bold">

@@ -16,7 +16,7 @@ export default function PhysicalCourses() {
     src="/images/education.jpg"
     alt="Education Banner"
     fill
-    className="object-cover opacity-60"
+    className="object-cover"
   />
  <h1 className="text-3xl md:text-4xl font-bold mb-0 text-center">
        Physical Courses

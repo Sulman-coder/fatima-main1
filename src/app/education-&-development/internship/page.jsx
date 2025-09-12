@@ -12,7 +12,7 @@ export default function Internship() {
     src="/images/education.jpg"
     alt="Education Banner"
     fill
-    className="object-cover opacity-60"
+    className="object-cover"
   />
   <h1 className="absolute z-20 text-white text-3xl md:text-4xl font-bold mb-6 text-center">
        Internship

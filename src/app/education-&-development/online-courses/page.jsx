@@ -10,7 +10,7 @@ export default function OnlineCourses() {
            src="/images/education.jpg"
            alt="Education Banner"
            fill
-           className="object-cover opacity-60"
+           className="object-cover"
          />
         <h1 className="absolute text-4xl md:text-4xl font-bold mb-0 text-center text-white">
           Online Course
