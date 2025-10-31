@@ -40,6 +40,21 @@ export default function IndustrialTraining() {
 
 
  <div className="bg-white">
+
+ {/* Overview Section */}
+      {/* <section className="bg-[#610F37] text-white py-4 px-4 md:px-12"> */}
+        <div className="flex text-xs gap-4 text-white-500 py-2">
+                <Link href="/about/leadership" className="hover:underline">
+                 Leadership
+                </Link>
+                <Link href="/about/history" className="hover:underline">
+                 History
+                </Link>
+               </div> 
+                <div className="w-full h-px bg-gray-700" />
+
+
+
         <div className="max-w-4xl mx-auto px-4 py-8">
 
 {/* <div className="px-4 py-16 max-w-6xl mx-auto space-y-12 bg-white"> */}

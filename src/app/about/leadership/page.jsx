@@ -1,4 +1,4 @@
-import AboutLayout from "../../../components/AboutLayout";
+import AboutLayout from "../../components/AboutLayout";
 
 export default function LeadershipPage() {
   return (

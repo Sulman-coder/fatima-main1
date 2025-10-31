@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Sidebar from "../about/Sidebar";
+import Sidebar from "./Sidebar";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu } from "react-icons/hi";

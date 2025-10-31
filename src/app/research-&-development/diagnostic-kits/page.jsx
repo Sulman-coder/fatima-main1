@@ -32,7 +32,7 @@ export default function DiagnosticTestKitsPage() {
   <Link href="/research-&-development/vaccine-candidates" className="hover:underline text-gray-500">
     Vaccine Candidates
   </Link>
-  <Link href="/research-&-development/diagnostic-kits" className="hover:underline text-gray-500">
+  <Link href="/research-&-development/diagnostic.kits" className="hover:underline text-gray-500">
     Point of Care Diagnostic Test Kits
   </Link>
 </div>
@@ -40,7 +40,7 @@ export default function DiagnosticTestKitsPage() {
  
 
 
-/<div className="bg-white w-full py-16 px-4">
+<div className="bg-white w-full py-16 px-4">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Left Side - Text */}
         <div className="md:w-1/2 space-y-6">
